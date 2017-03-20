@@ -21,16 +21,16 @@ int main() {
 //	MatrixXd P_out = MatrixXd(5, 5);
 //	ukf.UpdateState(&x_out, &P_out);
 
-//	VectorXd x = VectorXd(5);
-//	MatrixXd P = MatrixXd(5, 5);
-//
-//	ukf.PredictMeanAndCovariance(&x, &P);
+	VectorXd x = VectorXd(5);
+	MatrixXd P = MatrixXd(5, 5);
+
+	ukf.PredictMeanAndCovariance(&x, &P);
 
 //	MatrixXd Xsig_aug = MatrixXd(7, 15);
 //	ukf.AugmentedSigmaPoints(&Xsig_aug);
 
-	MatrixXd Xsig_pred = MatrixXd(5, 15);
-	ukf.SigmaPointPrediction(&Xsig_pred);
+//	MatrixXd Xsig_pred = MatrixXd(5, 15);
+//	ukf.SigmaPointPrediction(&Xsig_pred);
 
 
 	return 0;
