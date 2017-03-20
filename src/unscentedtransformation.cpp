@@ -26,8 +26,11 @@ int main() {
 //
 //	ukf.PredictMeanAndCovariance(&x, &P);
 
-	MatrixXd Xsig_aug = MatrixXd(7, 15);
-	ukf.AugmentedSigmaPoints(&Xsig_aug);
+//	MatrixXd Xsig_aug = MatrixXd(7, 15);
+//	ukf.AugmentedSigmaPoints(&Xsig_aug);
+
+	MatrixXd Xsig_pred = MatrixXd(5, 15);
+	ukf.SigmaPointPrediction(&Xsig_pred);
 
 
 	return 0;
